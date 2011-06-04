@@ -1,0 +1,8 @@
+name = Platnosci.pl
+description = Integrates platnosci.pl payment gateway
+core = 7.x
+files[] = entity_token.module
+
+dependencies[] = commerce_payment
+
+package = Commerce payment methods
