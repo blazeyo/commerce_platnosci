@@ -17,13 +17,12 @@ function commerce_platnosci_payment_update() {
       // Fetch transaction status and update our local copy.
       $result = commerce_platnosci_fetch_status($_POST['session_id'], $settings);
       commerce_platnosci_transaction_update($result, $settings);
-
-      // Tell gateway that everything went ok.
-      print 'OK';
-      exit();
     }
   }
-  return '';
+
+  // Tell gateway that we received the message.
+  print 'OK';
+  exit();
 }
 
 /**
@@ -42,7 +41,7 @@ function commerce_platnosci_fetch_status($session_id, $settings) {
   $sig = md5($settings['pos_id'] . $session_id . $ts . $settings['key1']);
 
   // Translate post variables into urlencoded query string. I don't know why but
-  //passing an array does not work in my enviroment.
+  // passing an array does not work in my environment.
   $postfields = array(
     'pos_id' => $settings['pos_id'],
     'session_id' => $session_id,

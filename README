@@ -1,7 +1,8 @@
-Platnosci.pl payment gateway integration for drupal commerce.
+Project: Platnosci.pl payment gateway integration for drupal commerce.
+Author: Blazej Owczarczyk http://drupal.org/user/353861
 
 Configuration:
-1. Set your POS data at http://jadlospis.com/admin/commerce/config/payment-methods/manage/commerce_payment_commerce_platnosci
+1. Set your POS data at /admin/commerce/config/payment-methods/manage/commerce_payment_commerce_platnosci
 2. Set following values in platnosci.pl POS configuration
     - Adres powrotu błędnego: http://www.yourdomain.com/checkout/%orderId%/payment/return/%sessionId%?result=error
     - Adres powrotu pozytywnego: http://www.yourdomain.com/checkout/%orderId%/payment/return/%sessionId%?result=ok
